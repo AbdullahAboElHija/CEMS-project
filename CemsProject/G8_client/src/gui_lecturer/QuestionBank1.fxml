@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="window" prefHeight="725.0" prefWidth="920.0" style="-fx-background-color: #ebfaf5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui_lecturer.QuestionBankBoundary">
+   <children>
+      <TableView fx:id="Qtable" cache="true" layoutX="29.0" layoutY="200.0" onMouseClicked="#selectQuestion" prefHeight="359.0" prefWidth="656.0" style="-fx-border-color: Black; -fx-background-color: #f8f8ff; -fx-border-width: 0.4;">
+        <columns>
+            <TableColumn fx:id="questionIDCol" prefWidth="144.79998779296875" text="Question ID" />
+            <TableColumn fx:id="professionNameCol" prefWidth="156.00003051757812" text="Profession" />
+            <TableColumn fx:id="contentCol" prefWidth="353.60003662109375" text="Content" />
+        </columns>
+      </TableView>
+      <Button fx:id="LogoutBtn" layoutX="529.0" layoutY="463.0" mnemonicParsing="false" onAction="#clickLogoutBtn" prefHeight="51.0" prefWidth="47.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="EditQuestionBtn" layoutX="725.0" layoutY="296.0" mnemonicParsing="false" onAction="#clickEditQuestionBtn" onMouseClicked="#selectQuestion" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #9ae5ce; -fx-background-radius: 20; -fx-border-width: 0.4; -fx-border-color: black; -fx-border-radius: 20;" text="Edit Question">
+         <font>
+            <Font name="Calisto MT" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="DeleteQuestionBtn" layoutX="725.0" layoutY="369.0" mnemonicParsing="false" onAction="#clickDeleteQuestionBtn" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #9ae5ce; -fx-background-radius: 20; -fx-border-width: 0.4; -fx-border-color: black; -fx-border-radius: 20;" text="Delete Question">
+         <font>
+            <Font name="Calisto MT" size="18.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="professionComboBox" layoutX="201.0" layoutY="147.0" onAction="#chooseProfession" prefWidth="150.0" promptText="Profession" />
+      <Button fx:id="AddQuestion" layoutX="725.0" layoutY="222.0" mnemonicParsing="false" onAction="#clickAddQuestion" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #9ae5ce; -fx-background-radius: 20; -fx-border-width: 0.4; -fx-border-color: black; -fx-border-radius: 20;" text="Create Question">
+         <font>
+            <Font name="Calisto MT" size="18.0" />
+         </font>
+      </Button>
+      <Pane layoutX="2.0" layoutY="639.0" prefHeight="85.0" prefWidth="920.0" style="-fx-background-color: #9ae5ce;">
+         <children>
+            <Button fx:id="BackBtn" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#clickBackBtn" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="-1.0" prefHeight="85.0" prefWidth="920.0" style="-fx-background-color: #ffff;">
+         <children>
+            <ImageView fitHeight="48.0" fitWidth="122.0" layoutX="20.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/photos/CemsLogo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="341.0" layoutY="17.0" prefHeight="51.0" prefWidth="238.0" text="Question Bank" textAlignment="CENTER">
+               <font>
+                  <Font name="Calisto MT Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="logoutBtn" layoutX="847.0" layoutY="7.0" mnemonicParsing="false" onAction="#clickLogoutBtn" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="49.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/photos/LogOut.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text layoutX="857.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LogOut">
+               <font>
+                  <Font name="Calisto MT" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Line endX="683.0" endY="-7.62939453125E-6" layoutX="240.0" layoutY="86.0" startX="-240.00001525878906" startY="-7.62939453125E-6" style="-fx-stroke-width: 0.4;" />
+      <Label fx:id="msgArea" layoutX="29.0" layoutY="589.0" prefHeight="30.0" prefWidth="482.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="Calisto MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="userName" layoutX="16.0" layoutY="54.0" text="Hi Name LastName">
+         <font>
+            <Font name="Calisto MT" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="146.0" text="Choose Profession :" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

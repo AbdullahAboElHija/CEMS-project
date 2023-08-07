@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="window" prefHeight="725.0" prefWidth="920.0" style="-fx-background-color: #ebfaf5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui_lecturer.ExamsBankBoundary">
+   <children>
+      <Button fx:id="deleteExamButton" layoutX="727.0" layoutY="441.0" mnemonicParsing="false" onAction="#clickDeleteExam" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #9ae5ce; -fx-background-radius: 20; -fx-border-color: black; -fx-border-width: 0.4; -fx-border-radius: 20;" text="Delete Exam">
+         <font>
+            <Font name="Calisto MT" size="18.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="coursesCombo" layoutX="531.0" layoutY="206.0" onAction="#chooseCourse" prefWidth="150.0" promptText="Course" />
+      <ComboBox fx:id="professionsCombo" layoutX="198.0" layoutY="205.0" onAction="#chooseProfession" prefWidth="150.0" promptText="Profession" />
+      <TableView fx:id="ExamsTable" layoutX="23.0" layoutY="256.0" onMouseClicked="#selectExam" prefHeight="309.0" prefWidth="664.0" style="-fx-background-color: #f8f8ff; -fx-border-color: black; -fx-border-width: 0.4;">
+        <columns>
+          <TableColumn fx:id="IDCol" prefWidth="117.60000228881836" text="ID" />
+          <TableColumn fx:id="professionCol" prefWidth="128.8000030517578" text="Profession" />
+            <TableColumn fx:id="courseCol" prefWidth="115.99993896484375" text="Course" />
+            <TableColumn fx:id="typeCol" prefWidth="129.59991455078125" text="Type" />
+            <TableColumn fx:id="durCol" prefWidth="172.0" text="Duration" />
+        </columns>
+      </TableView>
+      <Pane layoutX="1.0" prefHeight="85.0" prefWidth="920.0" style="-fx-background-color: #ffff;">
+         <children>
+            <Label layoutX="360.0" layoutY="14.0" prefHeight="58.0" prefWidth="200.0" text="Exams Bank">
+               <font>
+                  <Font name="Calisto MT Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="48.0" fitWidth="122.0" layoutX="20.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/photos/CemsLogo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="logoutBtn" layoutX="853.0" layoutY="8.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="58.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/photos/LogOut.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="userName" layoutX="15.0" layoutY="56.0" text="Hi Name LastName">
+               <font>
+                  <Font name="Calisto MT" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Line endX="820.0000610351562" endY="0.5999984741210938" layoutX="101.0" layoutY="85.0" startX="-100.0" style="-fx-stroke-width: 0.4;" />
+      <Pane layoutY="639.0" prefHeight="86.0" prefWidth="920.0" style="-fx-background-color: #9ae5ce;">
+         <children>
+            <Button fx:id="backButton" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#clickBackButton" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: black; -fx-background-radius: 20; -fx-border-color: black; -fx-border-width: 0.4; -fx-border-radius: 20;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Text layoutX="861.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LogOut">
+         <font>
+            <Font name="Calisto MT" size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="createExam" layoutX="727.0" layoutY="282.0" mnemonicParsing="false" onAction="#clickCreateExam" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #9ae5ce; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.4;" text="Create Exam">
+         <font>
+            <Font name="Calisto MT" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="38.0" layoutY="205.0" text="Choose Profession :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="399.0" layoutY="205.0" text="Choose Course:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="msgArea" layoutX="171.0" layoutY="598.0" prefHeight="27.0" prefWidth="579.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="previewBtn" layoutX="727.0" layoutY="363.0" mnemonicParsing="false" onAction="#clickPreview" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #9ae5ce; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.4;" text="PreviewExam">
+         <font>
+            <Font name="Calisto MT" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

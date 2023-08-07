@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="920.0" style="-fx-background-color: #ebfaf5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui_lecturer.TimeReqBoundary">
+   <children>
+      <TextField fx:id="timeAmount" layoutX="460.0" layoutY="248.0" prefHeight="26.0" prefWidth="251.0" />
+      <Button layoutX="386.0" layoutY="427.0" mnemonicParsing="false" onAction="#reqAddTime" prefHeight="26.0" prefWidth="147.0" style="-fx-background-color: #9ae5ce; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.4;" text="request">
+         <font>
+            <Font name="Calisto MT" size="18.0" />
+         </font></Button>
+      <Label layoutX="174.0" layoutY="250.0" text="Enter amount time you want to add:">
+         <font>
+            <Font name="Calisto MT" size="18.0" />
+         </font></Label>
+      <Label fx:id="ErrMsg" layoutX="350.0" layoutY="594.0" prefHeight="30.0" prefWidth="220.0" textFill="RED">
+         <font>
+            <Font name="Calisto MT" size="18.0" />
+         </font></Label>
+      <Label fx:id="CrrMsg" layoutX="350.0" layoutY="538.0" prefHeight="30.0" prefWidth="220.0" textFill="LIME">
+         <font>
+            <Font name="Calisto MT" size="18.0" />
+         </font></Label>
+      <Label layoutX="174.0" layoutY="308.0" text="Reason for request:">
+         <font>
+            <Font name="Calisto MT" size="18.0" />
+         </font></Label>
+      <TextArea fx:id="reasonTextArea" layoutX="335.0" layoutY="308.0" prefHeight="83.0" prefWidth="377.0" />
+      <Pane layoutX="-7.0" layoutY="639.0" prefHeight="85.0" prefWidth="926.0" style="-fx-background-color: #9ae5ce;">
+         <children>
+            <Button layoutX="26.0" layoutY="23.0" mnemonicParsing="false" onAction="#clickBackButton" prefHeight="40.0" prefWidth="147.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="back" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane prefHeight="86.0" prefWidth="920.0" style="-fx-background-color: #ffff;">
+         <children>
+            <Text layoutX="351.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Request">
+               <font>
+                  <Font name="Calisto MT Bold" size="36.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="48.0" fitWidth="147.0" layoutX="20.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/photos/CemsLogo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="userName" layoutX="10.0" layoutY="53.0" text="Hi Name LastName">
+               <font>
+                  <Font name="Calisto MT" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="logoutBtn" layoutX="855.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/photos/LogOut.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text layoutX="863.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="logOut">
+               <font>
+                  <Font name="Calisto MT" size="14.0" />
+               </font>
+            </Text>
+            <Line endX="697.0000610351562" endY="0.40000152587890625" layoutX="223.0" layoutY="86.0" startX="-223.00001525878906" startY="0.40000152587890625" style="-fx-stroke-width: 0.4;" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

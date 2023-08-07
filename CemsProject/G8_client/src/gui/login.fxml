@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="window" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoginFrameBoundary">
+   <children>
+      <SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="582.0" style="-fx-background-color: #ffff;">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <effect>
+                  <Glow level="0.0" />
+               </effect>
+               <children>
+                  <Pane layoutX="33.0" layoutY="41.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="236.0" prefWidth="514.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="41.0">
+                     <children>
+                        <Label layoutX="21.0" layoutY="152.0" text="Password  :">
+                           <font>
+                              <Font name="Calisto MT" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="21.0" layoutY="102.0" text="Username  :">
+                           <font>
+                              <Font name="Calisto MT" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="UsernameField" layoutX="19.0" layoutY="123.0" prefHeight="25.0" prefWidth="179.0" style="-fx-background-radius: 10;" />
+                        <PasswordField fx:id="PasswordField" layoutX="19.0" layoutY="176.0" prefHeight="25.0" prefWidth="179.0" style="-fx-background-radius: 10;" />
+                        <Label layoutX="101.0" layoutY="101.0" text="*" textFill="RED">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="97.0" layoutY="149.0" text="*" textFill="RED">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutY="28.0" prefHeight="49.0" prefWidth="281.0" text="Welcome Back!">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="40.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="loginButton" layoutX="47.0" layoutY="225.0" mnemonicParsing="false" onAction="#Login" prefHeight="42.0" prefWidth="136.0" style="-fx-background-radius: 15; -fx-background-color: B9EDDD; -fx-border-radius: 15; -fx-border-color: black; -fx-border-width: 0.3;" text="LOGIN">
+                           <font>
+                              <Font name="Calibri" size="18.0" />
+                           </font>
+                        </Button>
+                        <Pane layoutX="316.0" layoutY="-43.0" prefHeight="400.0" prefWidth="233.0" style="-fx-background-color: B9EDDD;">
+                           <children>
+                              <ImageView fitHeight="290.0" fitWidth="218.0" layoutX="8.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="/photos/CemsLogin.jpeg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="64.0" fitWidth="70.0" layoutX="-23.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="/photos/SupportLogo.jpeg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label fx:id="msgArea" layoutX="79.0" layoutY="346.0" prefHeight="17.0" prefWidth="210.0" textFill="RED" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

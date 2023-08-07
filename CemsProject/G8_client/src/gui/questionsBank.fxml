@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="658.0" style="-fx-background-color: #3e72ad;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.QuestionsBankBoundary">
+   <children>
+      <TableView fx:id="Qtable" layoutX="99.0" layoutY="112.0" onMouseClicked="#selectQuestion" prefHeight="200.0" prefWidth="478.0">
+        <columns>
+          <TableColumn fx:id="IDCol" text="ID" />
+          <TableColumn fx:id="subjectCol" text="subject" />
+            <TableColumn fx:id="courseCol" text="course name" />
+            <TableColumn fx:id="qTextCol" text="question text" />
+            <TableColumn fx:id="QnumCol" text="question number" />
+            <TableColumn fx:id="authorCol" prefWidth="75.0" text="author" />
+        </columns>
+      </TableView>
+      <Button fx:id="editQBtn" layoutX="491.0" layoutY="342.0" mnemonicParsing="false" onAction="#clickEditQ" text="edit question" />
+      <Label layoutX="243.0" layoutY="48.0" text="Questions Bank" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="disconnectBtn" layoutX="99.0" layoutY="342.0" mnemonicParsing="false" onAction="#clickDisconnect" text="Disconnect" />
+   </children>
+</AnchorPane>

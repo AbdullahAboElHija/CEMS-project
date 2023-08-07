@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="920.0" style="-fx-background-color: #ebfaf5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui_lecturer.CreateExam_step1Controller">
+   <children>
+      <Label layoutX="37.0" layoutY="120.0" text="Author:">
+         <font>
+            <Font name="Calisto MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="471.0" text="Comments to Students:">
+         <font>
+            <Font name="Calisto MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="372.0" text="Comments to lecturer:">
+         <font>
+            <Font name="Calisto MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="323.0" text="Duration:">
+         <font>
+            <Font name="Calisto MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="282.0" text="Choose Course:">
+         <font>
+            <Font name="Calisto MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="240.0" text="Choose Profession:">
+         <font>
+            <Font name="Calisto MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="178.0" text="Exam Type :">
+         <font>
+            <Font name="Calisto MT" size="20.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="btnComputerized" layoutX="255.0" layoutY="177.0" mnemonicParsing="false" onAction="#btnComputerizedPress" text="Online">
+         <font>
+            <Font name="Calisto MT" size="20.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="btnManual" layoutX="461.0" layoutY="177.0" mnemonicParsing="false" onAction="#btnManualPress" text="Manual">
+         <font>
+            <Font name="Calisto MT" size="20.0" />
+         </font></RadioButton>
+      <ComboBox fx:id="selectProffessionList" layoutX="256.0" layoutY="239.0" onAction="#selectProffessionList" prefWidth="150.0" promptText="Profession" />
+      <ComboBox fx:id="selectCourseList" layoutX="256.0" layoutY="281.0" onAction="#selectCourseList" prefWidth="150.0" promptText="Course" />
+      <TextField fx:id="textExamDuration" layoutX="256.0" layoutY="322.0" promptText="In minutes" />
+      <TextArea fx:id="textLecturers_Instructions" layoutX="256.0" layoutY="375.0" prefHeight="64.0" prefWidth="434.0" promptText="Please write comment to teacher" />
+      <TextArea fx:id="textStudent_Instructions" layoutX="256.0" layoutY="473.0" prefHeight="64.0" prefWidth="434.0" promptText="Please write comment to student" />
+      <Label fx:id="textAuthor" layoutX="256.0" layoutY="120.0" prefHeight="24.0" prefWidth="180.0">
+         <font>
+            <Font name="Calisto MT" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="ErrMsg" layoutX="174.0" layoutY="594.0" prefHeight="30.0" prefWidth="572.0" textFill="RED">
+         <font>
+            <Font name="Calisto MT" size="18.0" />
+         </font></Label>
+      <Pane prefHeight="85.0" prefWidth="920.0" style="-fx-background-color: #ffff;">
+         <children>
+            <Label layoutX="314.0" layoutY="18.0" text="Create New Exam">
+               <font>
+                  <Font name="Calisto MT Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="47.0" fitWidth="122.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/photos/CemsLogo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="logoutBtn" layoutX="856.0" layoutY="11.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/photos/LogOut.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text layoutX="859.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LogOut">
+               <font>
+                  <Font name="Calisto MT" size="14.0" />
+               </font>
+            </Text>
+            <Label fx:id="userName" layoutX="9.0" layoutY="54.0" text="Hi Name LastName">
+               <font>
+                  <Font name="Calisto MT" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="638.0" prefHeight="86.0" prefWidth="920.0" style="-fx-background-color: #9ae5ce;">
+         <children>
+            <Button fx:id="btnNext" layoutX="748.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnNext" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="Next" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="back" layoutX="22.0" layoutY="23.0" mnemonicParsing="false" onAction="#backBtn" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="back" textFill="WHITE">
+               <font>
+                  <Font name="Calisto MT" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Line endX="755.9999389648438" endY="-0.40000152587890625" layoutX="164.0" layoutY="86.0" startX="-164.00001525878906" startY="-0.40000152587890625" style="-fx-stroke-width: 0.4;" />
+      <Text fill="RED" layoutX="29.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" wrappingWidth="17.837890625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="RED" layoutX="29.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" wrappingWidth="17.837890625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="RED" layoutX="29.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" wrappingWidth="17.837890625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="RED" layoutX="29.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" wrappingWidth="17.837890625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

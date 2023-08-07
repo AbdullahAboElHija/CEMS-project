@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Server.ServerFrameController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#004896" height="509.0" stroke="#3e72ab" strokeType="INSIDE" width="199.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e72ad" height="509.0" layoutX="199.0" stroke="BLACK" strokeType="INSIDE" width="624.0" />
+      <TextField fx:id="ipInput" layoutX="14.0" layoutY="127.0" prefHeight="35.0" prefWidth="170.0" />
+      <Label layoutX="14.0" layoutY="98.0" prefWidth="124.0" text="IP Adress" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="267.0" text="Schema name" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="350.0" text="DB Username" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="183.0" text="Port" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="portInput" layoutX="14.0" layoutY="210.0" prefHeight="35.0" prefWidth="170.0" />
+      <TextField fx:id="dbNameInput" layoutX="14.0" layoutY="294.0" prefHeight="35.0" prefWidth="170.0" />
+      <TextField fx:id="dbUserName" layoutX="14.0" layoutY="377.0" prefHeight="35.0" prefWidth="170.0" />
+      <Label layoutX="17.0" layoutY="428.0" text="DB Password" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="14.0" prefHeight="53.0" prefWidth="185.0" text="Server Area" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="clientsTable" layoutX="231.0" layoutY="41.0" prefHeight="182.0" prefWidth="573.0">
+         <columns>
+            <TableColumn fx:id="ipCol" prefWidth="184.0" text="IP" />
+            <TableColumn fx:id="hostCol" prefWidth="188.0" text="Host" />
+            <TableColumn fx:id="statusCol" prefWidth="200.0" text="Status" />
+         </columns>
+      </TableView>
+      <Button fx:id="stopServerBtn" layoutX="511.0" layoutY="424.0" mnemonicParsing="false" onAction="#stopServer" prefHeight="63.0" prefWidth="143.0" text="Stop Server" />
+      <Button fx:id="startServerBtn" layoutX="340.0" layoutY="424.0" mnemonicParsing="false" onAction="#startServer" prefHeight="63.0" prefWidth="143.0" text="Start Server" />
+      <TextArea fx:id="MsgArea" layoutX="232.0" layoutY="268.0" prefHeight="122.0" prefWidth="573.0" />
+      <Label layoutX="232.0" layoutY="240.0" text="Console:" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="dbPassword" layoutX="15.0" layoutY="455.0" prefHeight="35.0" prefWidth="170.0" />
+   </children>
+</AnchorPane>
