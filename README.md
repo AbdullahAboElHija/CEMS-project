@@ -1,6 +1,13 @@
 # CEMS-project
 CEMS is an application designed to facilitate efficient management of course examinations and related tasks for students, lecturers, and the head department. The application streamlines various operations and interactions within an educational institution.
 
+## Diagrams
+### Class Diagram
+![Class Diagram](./ClassDiagram.png)
+
+### Use Case Diagram
+![Use Case Diagram](./UseCaseDiagram.png)
+
 # Features
 ## For Students
 *Take exams: Students can access and complete exams online.<br>
